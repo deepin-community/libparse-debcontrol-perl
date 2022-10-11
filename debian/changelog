@@ -1,0 +1,95 @@
+libparse-debcontrol-perl (2.005-4.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Mon, 28 Dec 2020 11:29:52 +0100
+
+libparse-debcontrol-perl (2.005-4) unstable; urgency=low
+
+  * Team upload
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ gregor herrmann ]
+  * Remove debian/source/local-options; abort-on-upstream-changes and
+    unapply-patches are default in dpkg-source since 1.16.1.
+
+  [ Dima Kogan ]
+  * Fixed improperly-handled comment stripping. (Closes: #640063, #675134)
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Damyan Ivanov ]
+  * add '=encoding utf-8' to Parse::DebControl::Error and
+    Parse::DebControl::Patch fixing POD tests with perl 5.18 (Closes: #710964)
+  * drop obsolete DM-Upload-Allowed control field
+  * fix d/copyright's Format: header to conform to copyright-format 1.0
+  * Standards-Version: 3.9.4 (after d/copyright fix)
+  * Use canonical (anonscm) URL in Vcs-Browser field
+
+ -- Damyan Ivanov <dmn@debian.org>  Wed, 05 Jun 2013 23:10:28 +0300
+
+libparse-debcontrol-perl (2.005-3) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/rules: switch order of arguments to dh.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Carl Fürstenberg ]
+  * switch usage from cdbs to short form debhelper format
+  * added patch for strict parsing for REAL debian control files 
+    (Closes: #535958)
+  * changed to _dowarn sub to using Error instead so we actually can use 
+    strict in production code
+  * Adding specific class for DEP3 patch metadata files (needs unconventional
+    parsing)
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Change VCS to git
+  * Update copyright file to adhere to DEP5
+  * Remove version from perl Build-Depends
+  * Remove libcompress-zlib-perl dependency
+  * Update Standards-Version (no change)
+  * Adding cmp function to Parse::Debcontrol::Patch::Forward
+  * Fix typos in man pages
+  * Remove sub-main version from debhelper build depends
+  * Adding dependency to libtest-exception-perl and liberror-perl
+  * Change short description to noun phrase
+  * Remove POD libs from Recommends
+  * Removed Gunnar Wolf as uploader
+
+ -- Carl Fürstenberg <azatoth@gmail.com>  Mon, 18 Apr 2011 01:25:56 +0200
+
+libparse-debcontrol-perl (2.005-2) unstable; urgency=low
+
+  [ Roberto C. Sanchez ]
+  * Update to debhelper compatibility level 6.
+
+  [ gregor herrmann ]
+  * debian/rules: delete /usr/lib/perl5 only if it exists (closes: #467811).
+  * debian/watch: use dist-based URL.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Tue, 11 Mar 2008 22:49:57 +0100
+
+libparse-debcontrol-perl (2.005-1) unstable; urgency=low
+
+  [ Carl Fürstenberg ]
+  * Initial Release. (closes: #437933)
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields.
+  * debian/copyright: add upstream source location, switch to new format.
+
+  [ Gunnar Wolf ]
+  * Fixed spelling in the package description.  Who thought Lintian
+    would be so thorough?!
+
+ -- Gunnar Wolf <gwolf@debian.org>  Mon, 07 Jan 2008 10:45:39 -0600
